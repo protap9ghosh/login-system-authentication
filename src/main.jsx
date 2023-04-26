@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-// import App from './App.jsx'
 import './index.css'
 import {
     createBrowserRouter,
@@ -13,6 +12,7 @@ import Register from './components/Register'
 import AuthProviders from './Provider/AuthProviders';
 import Orders from './components/Orders';
 import PrivateRoute from './routes/PrivateRoute';
+import Profile from './components/profile';
 
 const router = createBrowserRouter([
     {
@@ -30,6 +30,10 @@ const router = createBrowserRouter([
             {
                 path: "/register",
                 element: <Register></Register>,
+            },
+            {
+                path: "/profile",
+                element: <PrivateRoute><Profile></Profile></PrivateRoute>,
             },
             {
                 path: "/orders",
