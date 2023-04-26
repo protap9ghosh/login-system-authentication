@@ -71,12 +71,8 @@ const Login = () => {
                         </p>
 
                         <p className="mb-4 ml-9">
-                            <Link onClick={handleGoogleSingIn} className="label-text-alt link link-hover text-sm text-blue-500">Sing In With Google
-                            </Link>
+                            <Link onClick={handleGoogleSingIn} className="label-text-alt link link-hover text-sm text-blue-500">Continue With Google</Link>
                         </p>
-                        {/* <div>
-                            <button onClick={handleGoogleSingIn} className="btn btn-accent">Google SingIn</button>
-                        </div> */}
                     </div>
                 </div>
             </div>
