@@ -12,6 +12,7 @@ import Login from './components/Login'
 import Register from './components/Register'
 import AuthProviders from './Provider/AuthProviders';
 import Orders from './components/Orders';
+import PrivateRoute from './routes/PrivateRoute';
 
 const router = createBrowserRouter([
     {
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/orders",
-                element: <Orders></Orders>,
+                element: <PrivateRoute><Orders></Orders></PrivateRoute>,
             },
         ]
     },
@@ -43,5 +44,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <AuthProviders>
             <RouterProvider router={router} />
         </AuthProviders>
-  </React.StrictMode>,
+    </React.StrictMode>,
 )
