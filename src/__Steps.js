@@ -19,3 +19,8 @@
   * 2. Auth provider will have auth and pass email and password form register
   * 
  */
+
+ /*
+  * 1. Private Route
+  * 
+ */

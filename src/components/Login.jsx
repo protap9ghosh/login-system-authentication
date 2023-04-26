@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../Provider/AuthProviders';
 
 const Login = () => {
-    const { singIn } = useContext(AuthContext);
+    const { singIn, singInWithGoogle } = useContext(AuthContext);
 
     const handleLogin = event => {
         event.preventDefault();
@@ -18,6 +18,18 @@ const Login = () => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
                 form.reset();
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    }
+
+    // google event handle
+    const handleGoogleSingIn = () => {
+        singInWithGoogle()
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
             })
             .catch(error => {
                 console.log(error);
@@ -53,10 +65,18 @@ const Login = () => {
                             </div>
                         </form>
 
-                        <p className="mb-4 ml-9"><small>New to Auth Master?</small>
+                        <p className=" ml-9"><small>New to Auth Master?</small>
                             <Link to="/register" className="label-text-alt link link-hover text-sm text-blue-500"> Please Register
                             </Link>
                         </p>
+
+                        <p className="mb-4 ml-9">
+                            <Link onClick={handleGoogleSingIn} className="label-text-alt link link-hover text-sm text-blue-500">Sing In With Google
+                            </Link>
+                        </p>
+                        {/* <div>
+                            <button onClick={handleGoogleSingIn} className="btn btn-accent">Google SingIn</button>
+                        </div> */}
                     </div>
                 </div>
             </div>
