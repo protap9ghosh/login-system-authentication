@@ -15,7 +15,7 @@ const Login = () => {
         <div>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col">
-                    <div className="text-center lg:text-center">
+                    <div className="text-center">
                         <h1 className="text-5xl font-bold">Login now!</h1>
                     </div>
                     <div className="card flex-shrink-0 w-screen max-w-sm mt-5 shadow-2xl bg-base-100">
@@ -39,9 +39,11 @@ const Login = () => {
                                 <button className="btn btn-primary">Login</button>
                             </div>
                         </form>
-                        <Link to="/register">
-                            <button className="btn btn-link">New to Auth Master</button>
-                        </Link>
+
+                        <p className="mb-4 ml-9"><small>New to Auth Master?</small>
+                            <Link to="/register" className="label-text-alt link link-hover text-sm text-blue-500"> Please Register
+                            </Link>
+                        </p>
                     </div>
                 </div>
             </div>
