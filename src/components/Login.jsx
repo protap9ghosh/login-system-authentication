@@ -19,7 +19,7 @@ const Login = () => {
                 console.log(loggedUser);
             })
             .catch(error => {
-                console.log(error.message);
+                console.log(error);
             })
     }
 
